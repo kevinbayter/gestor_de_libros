@@ -11,7 +11,7 @@ data class Libro (
     val id: Long = 0,
     var titulo: String,
     var autor: String,
-    var ejemplares: Int = 0
+    var ejemplares: Int
 ) {
-    constructor() : this(0, "", "")
+    constructor() : this(0, "", "",0)
 }
