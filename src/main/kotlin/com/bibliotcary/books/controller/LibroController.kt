@@ -1,7 +1,7 @@
 package com.bibliotcary.books.controller
 
 import com.bibliotcary.books.Libro
-import com.bibliotcary.books.LibroRepository
+import com.bibliotcary.books.Repository.LibroRepository
 import org.springframework.web.bind.annotation.*
 
 @RestController

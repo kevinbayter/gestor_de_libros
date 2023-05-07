@@ -1,7 +1,7 @@
 package com.bibliotcary.books.controller
 
 import com.bibliotcary.books.Usuario
-import com.bibliotcary.books.UsuarioRepository
+import com.bibliotcary.books.Repository.UsuarioRepository
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

@@ -1,7 +1,7 @@
 package com.bibliotcary.books.controller
 
 import com.bibliotcary.books.Prestamo
-import com.bibliotcary.books.PrestamoRepository
+import com.bibliotcary.books.Repository.PrestamoRepository
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
