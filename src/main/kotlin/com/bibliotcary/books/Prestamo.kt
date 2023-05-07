@@ -7,12 +7,12 @@ import java.time.LocalDate
 data class Prestamo (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-    val fechaPrestamo: LocalDate,
-    val fechaDevolucion: LocalDate,
+    var fechaPrestamo: LocalDate,
+    var fechaDevolucion: LocalDate,
     @ManyToOne
-    val libro: Libro,
+    var libro: Libro,
     @ManyToOne
-    val usuario: Usuario
+    var usuario: Usuario
 ) {
     // Constructor sin argumentos
     constructor() : this(0, LocalDate.now(), LocalDate.now(), Libro(), Usuario())

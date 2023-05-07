@@ -7,9 +7,9 @@ import jakarta.persistence.Id
 @Entity
 data class Usuario(
     @Id val id: Long,
-    val nombre: String,
-    val apellido: String,
-    val maxLibrosPrestados: Int
+    var nombre: String,
+    var apellido: String,
+    var maxLibrosPrestados: Int
 ) {
     constructor() : this(0,"","",0)
 }

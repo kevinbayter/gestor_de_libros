@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/libros")
 class LibroController(private val libroRepository: LibroRepository) {
 
-    @GetMapping
+    @GetMapping("/getbooks")
     fun obtenerLibros(): List<Libro> {
         return libroRepository.findAll()
     }
@@ -18,7 +18,7 @@ class LibroController(private val libroRepository: LibroRepository) {
         return libroRepository.findById(id).orElseThrow { NoSuchElementException() }
     }
 
-    @PostMapping("/add-libros")
+    @PostMapping("/add")
     fun agregarLibro(@RequestBody libro: Libro): Libro {
         return libroRepository.save(libro)
     }
