@@ -6,9 +6,11 @@ Este proyecto es un sistema de gestión de préstamo de libros para una bibliote
 ## Instalación
 A continuación se detallan los pasos para instalar y ejecutar el proyecto:
 
-1. Clona el repositorio en tu máquina local:
+1. Clona el repositorio en tu máquina local: 
 
-
+``` 
+git clone https://github.com/kevinbayter/gestor_de_libros 
+```
 
 2. Navega al directorio del proyecto:
 
