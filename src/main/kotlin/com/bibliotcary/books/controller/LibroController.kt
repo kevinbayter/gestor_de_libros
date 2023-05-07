@@ -27,7 +27,7 @@ class LibroController(private val libroRepository: LibroRepository) {
     fun actualizarLibro(@PathVariable id: Long, @RequestBody libro: Libro): Libro {
         val libroExistente = libroRepository.findById(id).orElseThrow { NoSuchElementException() }
         libroExistente.titulo = libro.titulo
-        libroExistente.autor = libro.autor
+        libroExistente.autores = libro.autores
         libroExistente.ejemplares = libro.ejemplares
         return libroRepository.save(libroExistente)
     }

@@ -2,6 +2,7 @@ package com.bibliotcary.books.controller
 
 import com.bibliotcary.books.Usuario
 import com.bibliotcary.books.Repository.UsuarioRepository
+import com.bibliotcary.books.UsuariosWrapper
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/usuarios")
 class UsuarioController(private val usuarioRepository: UsuarioRepository) {
 
-    @GetMapping("/getusers")
+    @GetMapping("/get-users")
     fun obtenerUsuarios(): List<Usuario> {
         return usuarioRepository.findAll()
     }
@@ -28,6 +29,11 @@ class UsuarioController(private val usuarioRepository: UsuarioRepository) {
     @PostMapping("/add")
     fun agregarUsuario(@RequestBody usuario: Usuario): Usuario {
         return usuarioRepository.save(usuario)
+    }
+
+    @PostMapping("/add-users")
+    fun agregarUsuarios(@RequestBody usuariosWrapper: UsuariosWrapper): List<Usuario> {
+        return usuarioRepository.saveAll(usuariosWrapper.usuarios)
     }
 
     @PutMapping("/{id}")
