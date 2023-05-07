@@ -18,7 +18,7 @@ class LibroController(private val libroRepository: LibroRepository) {
         return libroRepository.findById(id).orElseThrow { NoSuchElementException() }
     }
 
-    @PostMapping
+    @PostMapping("/add-libros")
     fun agregarLibro(@RequestBody libro: Libro): Libro {
         return libroRepository.save(libro)
     }
